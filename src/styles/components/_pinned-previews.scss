@@ -1,0 +1,42 @@
+@use "../assest/image";
+@use "../variables/color";
+@import "../mixin/pinned-decorator";
+
+.pinned-previews {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em;
+  height: 330px;
+  margin-top: 3em;
+
+  & .preview:first-of-type {
+    grid-row: span 2;
+
+    & .preview__title {
+      font-size: 2em;
+    }
+  }
+
+  .preview {
+    &:first-of-type {
+      @include pinned-decorator(image.$interier, color.$color-transparent);
+    }
+
+    &:nth-of-type(2) {
+      @include pinned-decorator(image.$basketball, color.$color-light-violet);
+    }
+
+    &:nth-of-type(3) {
+      @include pinned-decorator(image.$tabletop, color.$color-yellow);
+    }
+
+    &:nth-of-type(4) {
+      @include pinned-decorator(image.$chair, color.$orange);
+    }
+
+    &:nth-of-type(5) {
+      @include pinned-decorator(image.$table, color.$color-violet);
+    }
+  }
+}

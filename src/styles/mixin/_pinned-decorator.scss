@@ -1,0 +1,25 @@
+@import "./preview-decorator.scss";
+@import "../functions/generate-foreground.scss";
+
+@mixin pinned-decorator($image, $bg-color) {
+  @include preview-decorator($image, $bg-color);
+
+  & .preview__badges {
+    .preview__badge {
+      $inverted: generate-foreground($bg-color);
+      background: $inverted;
+      color: generate-foreground($inverted);
+      border-color: $inverted;
+    }
+  }
+
+  .preview__link {
+    &:hover {
+      background-size: 100%;
+    }
+
+    & .preview__title:hover::after {
+      opacity: 0;
+    }
+  }
+}

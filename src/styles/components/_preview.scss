@@ -1,0 +1,82 @@
+@use "../variables/color";
+.preview {
+  display: flex;
+  border-radius: 1.5em;
+  width: auto;
+
+  &__link {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 1.5em;
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  &__badges {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .preview__badge {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.4em;
+      letter-spacing: 0.2em;
+      padding: 0.4em 1.4em;
+      border: 1px solid color.$white;
+      border-radius: 1.2em;
+      text-align: center;
+
+      &:not(:last-of-type) {
+        margin-right: 0.6em;
+      }
+    }
+  }
+
+  &__author {
+    font-size: 0.8em;
+    font-style: normal;
+    margin-bottom: 0.8em;
+  }
+
+  &__title {
+    font-size: 1.1em;
+    line-height: 150%;
+    margin: 0;
+  }
+
+  &__sneak-peek {
+    font-size: 0.9em;
+    line-height: 150%;
+    max-width: 80%;
+
+    &::before {
+      content: "";
+      width: 1em;
+      border-bottom: 1px solid color.$white;
+      display: flex;
+      margin-bottom: 1em;
+    }
+  }
+
+  &--pinned {
+    .preview__link {
+      justify-content: space-between;
+      padding: 1.5em 2em;
+      min-height: 9em;
+
+      &:focus,
+      &:hover {
+        transform: translateY(-0.5em);
+        text-decoration: none;
+      }
+    }
+
+    .preview__author {
+      margin-top: auto;
+    }
+  }
+}

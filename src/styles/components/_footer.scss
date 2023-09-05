@@ -1,0 +1,66 @@
+@use "../variables/color";
+@use "../assest/svg";
+.footer {
+  margin-top: 8em;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__socials-list {
+    list-style: none;
+    margin-left: auto;
+    display: flex;
+  }
+
+  &__socials-list-element {
+    margin-left: 1.5em;
+
+    .footer__socials-link {
+      display: inline-flex;
+      width: 1.5em;
+      height: 1.5em;
+      content: "";
+      background-position: center;
+      transition: 0.3s;
+
+      &--twitter {
+        background: svg.$twitter;
+      }
+
+      &--instagram {
+        background: svg.$instagram;
+      }
+
+      &--unsplash {
+        background: svg.$unsplash;
+      }
+
+      &--vimeo {
+        background: svg.$vimeo;
+      }
+
+      &:hover,
+      &:focus {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .navigation__list-element {
+    font-size: 0.8em;
+  }
+
+  &__copyright {
+    flex-basis: 100%;
+    margin: 1em 0;
+    opacity: 0.6;
+    font-weight: 700;
+    font-size: 0.6em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: color.$white;
+  }
+}

@@ -1,0 +1,83 @@
+@use "../variables/color";
+@use "../assest/svg";
+
+.navigation {
+  display: flex;
+  align-items: center;
+
+  &--header {
+    font-size: 0.9em;
+    .navigation__index-link {
+      margin-right: auto;
+
+      img {
+        width: 135px;
+        height: auto;
+      }
+    }
+  }
+
+  &__links-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__link {
+    color: color.$white;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    margin-right: 1em;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 3px;
+      top: -4px;
+      right: -8px;
+      opacity: 0;
+      transition: 140ms;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      &::after {
+        opacity: 0.5;
+        background-color: color.$white;
+      }
+    }
+
+    &--active,
+    &--active:hover,
+    &--active:focus {
+      &::after {
+        opacity: 1;
+        background-color: color.$orange;
+      }
+    }
+  }
+
+  &__search-button {
+    width: 24px;
+    height: 24px;
+    background: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    background-size: 16px 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: svg.$search;
+
+    &:hover,
+    &:focus {
+      transform: rotate(25deg) scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,5 @@
+@use "../variables/color";
+
+@function generate-foreground($color) {
+  @return if(lightness($color) > 45%, color.$background, color.$white);
+}

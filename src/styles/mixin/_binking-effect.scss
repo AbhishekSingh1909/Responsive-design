@@ -1,0 +1,11 @@
+@use "../variables/color";
+
+@mixin blink-effect($value) {
+  @if ($value < 1) {
+    opacity: 0;
+    color: color.$white;
+  } @else {
+    opacity: 1;
+    color: color.$yellow;
+  }
+}

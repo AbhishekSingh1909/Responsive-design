@@ -1,0 +1,98 @@
+@use "../variables/color";
+@use "../assest/image";
+@import "../mixin/preview-decorator";
+
+.earlier-articles {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__bait {
+    margin: 1.5em 0;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  &__articles {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+
+    .preview {
+      &__link {
+        min-height: 30em;
+        box-sizing: border-box;
+        padding: 6em 3em 1em 4em;
+      }
+
+      &__title {
+        font-size: 1.4em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+      }
+
+      &__author {
+        font-size: 1em;
+      }
+
+      &__sneak-peek {
+        font-size: 1em;
+        max-width: 100%;
+      }
+
+      &:first-of-type {
+        @include preview-decorator(image.$coffee, color.$color-yellow);
+      }
+
+      &:nth-of-type(2) {
+        @include preview-decorator(image.$basketball, color.$color-blue);
+      }
+
+      &:nth-of-type(3) {
+        @include preview-decorator(image.$chair, color.$orange);
+      }
+    }
+  }
+
+  &__promoted-articles {
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2em;
+    .preview__link:hover {
+      background-size: 105%;
+      background-position: center;
+      text-decoration: none;
+    }
+
+    .preview {
+      &__link {
+        padding: 6em 4em 2em 4em;
+      }
+
+      &__title {
+        font-size: 1.9em;
+      }
+
+      &__sneak-peek {
+        max-width: 90%;
+      }
+
+      &:first-of-type {
+        @include preview-decorator(image.$table, color.$color-light-violet);
+      }
+
+      &:nth-of-type(2) {
+        @include preview-decorator(image.$basketball, color.$color-violet);
+      }
+    }
+  }
+
+  .btn {
+    margin-top: 2em;
+    width: 70%;
+  }
+}

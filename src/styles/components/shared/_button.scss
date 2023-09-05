@@ -1,0 +1,29 @@
+@use "../../variables/color";
+
+.btn {
+  padding: 3em;
+  background-color: color.$foreground;
+  color: color.$white;
+  box-shadow: none;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.7em;
+  letter-spacing: 0.2em;
+  border-radius: 1em;
+  transition: 0.3s;
+  border-left: 0 solid color.$foreground;
+  border-right: 0 solid color.$foreground;
+  box-sizing: content-box;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-left-width: 1em;
+    border-right-width: 1em;
+    border-color: color.$yellow;
+    background-color: color.$yellow;
+    color: color.$background;
+  }
+}

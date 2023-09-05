@@ -1,0 +1,57 @@
+@import "../functions/generate-foreground.scss";
+@import "../functions/get-arrow.scss";
+
+@mixin preview-decorator($image, $bg-color) {
+  $inverted: generate-foreground($bg-color);
+
+  .preview__link {
+    background: linear-gradient(to right, $bg-color, color.$color-transparent),
+      $image;
+    background-color: transparent;
+    background-size: 100%;
+    background-position: center;
+
+    &:hover {
+      background-size: 105%;
+      text-decoration: none;
+    }
+  }
+
+  & .preview__title,
+  & .preview__author,
+  & .preview__sneak-peek {
+    color: generate-foreground($bg-color);
+  }
+
+  & .preview__sneak-peek::before {
+    border-color: $inverted;
+  }
+
+  & .preview__badges {
+    .preview__badge {
+      color: $inverted;
+      border-color: $inverted;
+    }
+  }
+
+  & .preview__title::after {
+    transition: 0.3s;
+    opacity: 0;
+    display: inline-flex;
+    width: 1em;
+    height: 1em;
+    background-size: 0.8em;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0.2em;
+    content: "";
+    transform: translateX(-1em);
+  }
+
+  & .preview__title:hover::after {
+    background: get-arrow($bg-color);
+    opacity: 1;
+    transform: translateX(0);
+    text-decoration: none;
+  }
+}

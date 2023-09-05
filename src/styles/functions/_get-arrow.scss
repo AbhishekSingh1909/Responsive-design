@@ -1,0 +1,5 @@
+@use "../assest/svg";
+
+@function get-arrow($color) {
+  @return if(lightness($color) > 45%, svg.$arrow-black, svg.$arrow-white);
+}

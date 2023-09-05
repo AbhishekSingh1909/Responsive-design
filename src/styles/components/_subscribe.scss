@@ -1,0 +1,98 @@
+@use "../variables/color";
+@use "../variables/font";
+@use "../mixin/binking-effect";
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  20% {
+    width: 0%;
+  }
+  60% {
+    width: 100%;
+  }
+  80% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes flashing-indicator {
+  0% {
+    @include binking-effect.blink-effect(0);
+  }
+  50% {
+    @include binking-effect.blink-effect(0.5);
+  }
+  100% {
+    @include binking-effect.blink-effect(1);
+  }
+}
+
+.subscribe {
+  margin-top: 6em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: bolder;
+    max-width: 40%;
+    text-align: center;
+    line-height: 135%;
+    margin: 0 auto;
+    padding: 15px 0;
+  }
+
+  & p {
+    display: inline-flex;
+    font-size: font.$subscribe-ityped-size;
+    font-family: font.$subscribe-ityped-font;
+    font-weight: 800;
+    margin: 0 0 20px 0;
+    justify-content: center;
+
+    & span:first-child {
+      width: 0%;
+      height: 1.2em;
+      overflow: hidden;
+      word-break: break-all;
+      letter-spacing: 2px;
+      animation: typing 8s linear infinite;
+    }
+
+    & span:nth-child(2) {
+      animation: flashing-indicator 2s linear infinite;
+    }
+  }
+
+  &__email-input {
+    background: none;
+    font-weight: 700;
+    border: none;
+    border-bottom: 2px solid color.$white;
+    padding-bottom: 0.5em;
+    text-align: center;
+    font-size: 1.1em;
+    color: color.$white;
+    width: 450px;
+    font-weight: 700;
+    margin-bottom: 2em;
+    transition: 0.5s ease-in-out;
+
+    &:focus {
+      outline: none;
+      width: 600px;
+    }
+  }
+}
