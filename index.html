@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <title>Responsive design</title>
+  </head>
+
+  <body>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <nav class="navigation navigation--header">
+          <a
+            href="/"
+            aria-label="Get to main page"
+            class="navigation__index-link"
+          >
+            <img
+              src="https://maido-dark.fueko.net/content/images/2020/06/maido.svg"
+              alt="Maito Logo"
+            />
+          </a>
+          <ul class="navigation__links-list">
+            <li class="navigation__list-element">
+              <a class="navigation__link navigation__link--active" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="navigation__list-element">
+              <a class="navigation__link" href="#">Features</a>
+            </li>
+            <li class="navigation__list-element">
+              <a class="navigation__link" href="#">Style Guide</a>
+            </li>
+            <li class="navigation__list-element">
+              <a class="navigation__link" href="#">Contact</a>
+            </li>
+            <li class="navigation__list-element">
+              <a class="navigation__link" href="#">Newsletter</a>
+            </li>
+            <li class="navigation__list-element">
+              <a class="navigation__link" href="#">Demos</a>
+            </li>
+            <li class="navigation__list-element">
+              <a class="navigation__link" href="#">Get Theme</a>
+            </li>
+            <li
+              class="navigation__list-element navigation__list-element--search"
+            >
+              <button class="navigation__search-button" type="menu">
+                <span class="text-hidden">Search</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1 class="text-hidden"> Home Page</h1>
+      <aside class="global-aside">
+        <em class="global-aside__description">Thoughts, stories and ideas</em>
+      </aside>
+      <div class="container container--max">
+        <section class="pinned-previews">
+          <h2 class="text-hidden">Pinned articles</h2>
+          <article class="preview preview--pinned">
+            <a class="preview__link" href="#">
+              <div class="preview__badges">
+                <span class="preview__badge preview__badge--pinned"
+                  >Pinned</span
+                >
+              </div>
+              <em class="preview__author">by James Bryant</em>
+              <h1 class="preview__title">One space, so many possibilities</h1>
+            </a>
+          </article>
+          <article class="preview preview--pinned">
+            <a class="preview__link" href="#">
+              <div class="preview__badges">
+                <span class="preview__badge preview__badge--pinned"
+                  >Pinned</span
+                >
+              </div>
+              <em class="preview__author">by Janet Robertson</em>
+              <h3 class="preview__title">Make the open space open to more</h3>
+            </a>
+          </article>
+          <article class="preview preview--pinned">
+            <a class="preview__link" href="#">
+              <div class="preview__badges">
+                <span class="preview__badge preview__badge--pinned"
+                  >Pinned</span
+                >
+              </div>
+              <em class="preview__author">by James Bryant and other authors</em>
+              <h3 class="preview__title">An open space for open mind</h3>
+            </a>
+          </article>
+          <article class="preview preview--pinned">
+            <a class="preview__link" href="#">
+              <div class="preview__badges">
+                <span class="preview__badge preview__badge--pinned"
+                  >Pinned</span
+                >
+              </div>
+              <em class="preview__author"
+                >by Patricia Jenkins and other authors</em
+              >
+              <h3 class="preview__title">A comfortable spot for everyone</h3>
+            </a>
+          </article>
+          <article class="preview preview--pinned">
+            <a class="preview__link" href="#">
+              <div class="preview__badges">
+                <span class="preview__badge preview__badge--pinned"
+                  >Pinned</span
+                >
+              </div>
+              <em class="preview__author">by Margaret Robinson</em>
+              <h3 class="preview__title">
+                Anyone can hold the helm when the sea is calm
+              </h3>
+            </a>
+          </article>
+        </section>
+      </div>
+      <div class="container">
+        <section class="featured-previews">
+          <h2 class="text-hidden">Featured articles</h2>
+          <article class="preview">
+            <a class="preview__link" href="#">
+              <div class="preview__badges">
+                <span class="preview__badge">Case Study</span>
+                <span class="preview__badge">Open Space</span>
+              </div>
+              <h2 class="preview__title">
+                The perfect place that helps you get work done in peace
+              </h2>
+              <em class="preview__author"
+                >by Janet Robertson & Margaret Robertson</em
+              >
+            </a>
+          </article>
+          <article class="preview">
+            <a class="preview__link" href="#">
+              <div class="preview__badges">
+                <span class="preview__badge">Furniture</span>
+                <span class="preview__badge">Productivity</span>
+              </div>
+              <h2 class="preview__title">
+                I work best when my space is filled with inspiration
+              </h2>
+              <p class="preview__sneak-peek">
+                Haec et tu ita posuisti, et verba vestra sunt. Contemnit enim
+                disserendi elegantiam, confuse loquitur. Bona autem corporis
+                huic sunt, quod posterius posui, similiora.
+              </p>
+              <em class="preview__author"
+                >by Margaret Robertson & Sean Hamilton</em
+              >
+            </a>
+          </article>
+          <article class="preview">
+            <a class="preview__link" href="#">
+              <div class="preview__badges">
+                <span class="preview__badge">Creative</span>
+                <span class="preview__badge">Productivity</span>
+              </div>
+              <h2 class="preview__title">
+                The trick to gettng more done is to have the freedom to roam
+                around
+              </h3>
+              <em class="preview__author">by Patricia Jenkins</em>
+            </a>
+          </article>
+        </section>
+      </div>
+      <div class="container">
+        <section class="earlier-articles">
+          <h2 class="text-hidden">Earlier Articles</h2>
+          <strong class="earlier-articles__bait"
+            >You really must see our earlier articles</strong
+          >
+          <div class="earlier-articles__articles">
+            <div class="earlier-articles__promoted-articles">
+              <article class="preview">
+                <a class="preview__link" href="#">
+                  <div class="preview__badges">
+                    <span class="preview__badge">Creative</span>
+                  </div>
+                  <h3 class="preview__title">Problems are not stop signs</h3>
+                  <p class="preview__sneak-peek">
+                    Haec et tu ita posuisti, et verba vestra sunt. Contemnit
+                    enim disserendi elegantiam, confuse loquitur. Bona autem
+                    corporis huic sunt, quod posterius posui, similiora.
+                  </p>
+                  <em class="preview__author"
+                    >by Margaret Robertson & Patricia Jenkins</em
+                  >
+                </a>
+              </article>
+              <article class="preview">
+                <a class="preview__link" href="#">
+                  <div class="preview__badges">
+                    <span class="preview__badge">Case Study</span>
+                    <span class="preview__badge">Creative</span>
+                    <span class="preview__badge">Open Space</span>
+                  </div>
+                  <h3 class="preview__title">Quiet time is the best time</h3>
+                  <em class="preview__author">by Sean Hamilton</em>
+                </a>
+              </article>
+            </div>
+            <article class="preview">
+              <a class="preview__link" href="#">
+                <div class="preview__badges">
+                  <span class="preview__badge">Creative</span>
+                  <span class="preview__badge">Furniture</span>
+                </div>
+                <h3 class="preview__title">
+                  Being unique is better than being creative
+                </h3>
+                <em class="preview__author">by Patricia Jenkins</em>
+              </a>
+            </article>
+            <article class="preview">
+              <a class="preview__link" href="#">
+                <div class="preview__badges">
+                  <span class="preview__badge">Case study</span>
+                  <span class="preview__badge">Open space</span>
+                </div>
+                <h3 class="preview__title">
+                  Anyone can hold the helm when the sea is calm
+                </h3>
+                <p class="preview__sneak-peek">
+                  Quasi vero aut concedatur in omnibus stultis aeque magna esse.
+                </p>
+                <em class="preview__author">by Margaret Robertson</em>
+              </a>
+            </article>
+            <article class="preview">
+              <a class="preview__link" href="#">
+                <div class="preview__badges">
+                  <span class="preview__badge">Productivity</span>
+                  <span class="preview__badge">Open space</span>
+                </div>
+                <h3 class="preview__title">Change is always happening</h3>
+                <p class="preview__sneak-peek">
+                  Tertium autem omnibus aut maximis rebus iis, quae secundum
+                  naturam sint, fruentem vivere.
+                </p>
+                <em class="preview__author">by Margaret Robertson</em>
+              </a>
+            </article>
+          </div>
+          <button type="button" class="btn earlier-articles__load-more-btn">
+            Load more
+          </button>
+        </section>
+      </div>
+      <div class="container">
+        <section class="subscribe">
+          <h1 class="subscribe__title">Subscribe to see what we're thinking</h2>
+          <p>
+          <span>Start your day with Maido</span>
+          <span>|</span>
+        </p>
+          <form action="#" class="subscribe__form">
+            <input
+              type="email"
+              name="email"
+              required="required"
+              placeholder="Your email address"
+              class="subscribe__email-input"
+            />
+            <button type="submit" class="btn submit__form-btn">
+              Subscribe
+            </button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <nav class="navigation navigation--footer">
+            <ul class="navigation__links-list">
+              <li class="navigation__list-element">
+                <a class="navigation__link navigation__link--active" href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="navigation__list-element">
+                <a class="navigation__link" href="#">Features</a>
+              </li>
+              <li class="navigation__list-element">
+                <a class="navigation__link" href="#">Style Guide</a>
+              </li>
+              <li class="navigation__list-element">
+                <a class="navigation__link" href="#">Contact</a>
+              </li>
+              <li class="navigation__list-element">
+                <a class="navigation__link" href="#">Demos</a>
+              </li>
+              <li class="navigation__list-element">
+                <a class="navigation__link" href="#">Get Theme</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="footer__socials-list">
+            <li class="footer__socials-list-element">
+              <a
+                class="footer__socials-link footer__socials-link--twitter"
+                href="#"
+                ><span class="text-hidden">Twitter</span></a
+              >
+            </li>
+            <li class="footer__socials-list-element">
+              <a
+                class="footer__socials-link footer__socials-link--instagram"
+                href="#"
+                ><span class="text-hidden">Instagram</span></a
+              >
+            </li>
+            <li class="footer__socials-list-element">
+              <a
+                class="footer__socials-link footer__socials-link--unsplash"
+                href="#"
+                ><span class="text-hidden">Unsplash</span></a
+              >
+            </li>
+            <li class="footer__socials-list-element">
+              <a
+                class="footer__socials-link footer__socials-link--vimeo"
+                href="#"
+                ><span class="text-hidden footer">Vimeo</span></a
+              >
+            </li>
+          </ul>
+          <p class="footer__copyright">
+            Maido © 2023. All right reserved. Published with ghost & Maido.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+    
